@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
+            $table->string('judul_agenda');
             $table->string('deskripsi');
             $table->date('tanggal');
             $table->string('tags');
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('penyelenggara');
             $table->unsignedBigInteger('admin_id');   // foreign key dari tabel admin
             $table->timestamps();
-            
+
             $table->foreign('admin_id')->references('id')->on('users');
         });
     }
