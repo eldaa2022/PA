@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_agenda');
+            $table->string('judul');
             $table->string('deskripsi');
             $table->date('tanggal');
             $table->string('tags');
